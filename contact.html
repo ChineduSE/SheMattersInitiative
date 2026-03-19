@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — She Matters Initiative</title>
+  <meta name="description" content="Get in touch with She Matters Initiative. Reach out to volunteer, partner, donate, or simply learn more about our work." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.jpeg" alt="She Matters Initiative Logo" />
+      <span>She Matters Initiative</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <a href="index.html#donate" class="nav-donate">Donate</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="index.html#donate" class="nav-donate">Donate</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <span class="section-tag fade-in">We'd Love to Hear From You</span>
+    <h1 class="fade-in">Get In <em style="color:var(--lime); font-style:italic;">Touch</em></h1>
+    <p class="fade-in">Whether you want to volunteer, donate, partner with us, or just say hello — our inbox is always open.</p>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <section>
+    <div class="section-inner">
+      <div class="contact-grid">
+
+        <!-- LEFT: Info -->
+        <div class="fade-in">
+          <h3>Let's Connect</h3>
+          <p>She Matters Initiative is always looking for passionate people who believe in the power of girls. Reach out — we respond to every message.</p>
+
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-item-text">
+              <div class="label">Email</div>
+              <div class="value">shemattersinitiative@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-item-text">
+              <div class="label">Based In</div>
+              <div class="value">Nigeria (Active in Ogun & Edo States)</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📲</div>
+            <div class="contact-item-text">
+              <div class="label">Social Media</div>
+              <div class="value">@shemattersinitiative</div>
+            </div>
+          </div>
+
+          <div style="margin-top:2.5rem;">
+            <h4 style="font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--lime); font-weight:600; margin-bottom:1rem;">How You Can Help</h4>
+            <div style="display:flex; flex-direction:column; gap:0.8rem;">
+              <div style="display:flex; align-items:center; gap:10px; font-size:0.9rem; color:#aaa;">
+                <span style="color:var(--lime); font-size:0.8rem;">✦</span> Volunteer at our outreaches
+              </div>
+              <div style="display:flex; align-items:center; gap:10px; font-size:0.9rem; color:#aaa;">
+                <span style="color:var(--lime); font-size:0.8rem;">✦</span> Donate sanitary pads or funds
+              </div>
+              <div style="display:flex; align-items:center; gap:10px; font-size:0.9rem; color:#aaa;">
+                <span style="color:var(--lime); font-size:0.8rem;">✦</span> Partner with us as an organisation
+              </div>
+              <div style="display:flex; align-items:center; gap:10px; font-size:0.9rem; color:#aaa;">
+                <span style="color:var(--lime); font-size:0.8rem;">✦</span> Sponsor a school outreach
+              </div>
+              <div style="display:flex; align-items:center; gap:10px; font-size:0.9rem; color:#aaa;">
+                <span style="color:var(--lime); font-size:0.8rem;">✦</span> Share our work on social media
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Form -->
+        <div class="contact-form fade-in" style="animation-delay:0.15s">
+          <h4 style="font-family:var(--serif); font-size:1.3rem; font-weight:700; margin-bottom:1.5rem;">Send Us a Message</h4>
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="Ada" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Obi" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="reason">I want to...</label>
+              <select id="reason" name="reason">
+                <option value="">Choose a reason</option>
+                <option value="volunteer">Volunteer at an outreach</option>
+                <option value="donate">Make a donation</option>
+                <option value="partner">Partner with She Matters</option>
+                <option value="sponsor">Sponsor an outreach</option>
+                <option value="media">Media / Press enquiry</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" placeholder="Tell us more about how you'd like to get involved or what you need..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Message ✦</button>
+            <div id="formSuccess" style="display:none; margin-top:1rem; padding:0.8rem 1rem; background:rgba(183,255,0,0.1); border:1px solid rgba(183,255,0,0.3); border-radius:8px; color:var(--lime); font-size:0.88rem; text-align:center;">
+              ✓ Thank you! We'll be in touch soon.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DONATE REMINDER -->
+  <section style="background:var(--card-bg); border-top:1px solid #1a1a1a; text-align:center;">
+    <div class="section-inner" style="max-width:600px;">
+      <span class="section-tag fade-in">Make a Difference</span>
+      <h2 class="section-title fade-in">Ready to Donate?</h2>
+      <p class="fade-in" style="color:#999; margin-bottom:2rem;">Your support funds outreaches, buys sanitary pads, and helps us reach more girls. Every naira counts.</p>
+      <a href="index.html#donate" class="btn-primary fade-in">See Bank Details →</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-row">
+          <img src="logo.jpeg" alt="She Matters Initiative" />
+          <span>She Matters Initiative</span>
+        </div>
+        <p>A social impact movement empowering teenage girls with clarity, confidence, leadership awareness, and menstrual hygiene education.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Get Involved</h5>
+        <a href="index.html#donate">Donate</a>
+        <a href="contact.html">Volunteer</a>
+        <a href="contact.html">Partner With Us</a>
+        <a href="index.html#upcoming">Upcoming Projects</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 She Matters Initiative. All rights reserved.</p>
+      <p style="color:#333;">Teen girls, future leaders.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('navbar').classList.toggle('open');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      // Since this is a static site, we show a success message.
+      // To make this functional, replace with Formspree or EmailJS.
+      document.getElementById('formSuccess').style.display = 'block';
+      document.getElementById('contactForm').reset();
+      setTimeout(() => {
+        document.getElementById('formSuccess').style.display = 'none';
+      }, 6000);
+    }
+  </script>
+</body>
+</html>
